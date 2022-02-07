@@ -1,0 +1,37 @@
+.container {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.menu {
+  width: 35px;
+  height: 4px;
+  background-color: #222222;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+}
+
+.current .menu-1 {
+  transform: rotate(45deg) translate(3px, 8px);
+  -webkit-transform: rotate(45deg) translate(3px, 8px);
+  -moz-transform: rotate(45deg) translate(3px, 8px);
+  -ms-transform: rotate(45deg) translate(3px, 8px);
+  -o-transform: rotate(45deg) translate(3px, 8px);
+}
+
+.current .menu-2 {
+  opacity: 0;
+}
+
+.current .menu-3 {
+  transform: rotate(-45deg) translate(4px, -10px);
+  -webkit-transform: rotate(-45deg) translate(4px, -10px);
+  -moz-transform: rotate(-45deg) translate(4px, -10px);
+  -ms-transform: rotate(-45deg) translate(4px, -10px);
+  -o-transform: rotate(-45deg) translate(4px, -10px);
+}
