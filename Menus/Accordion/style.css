@@ -22,11 +22,22 @@ body {
     border: none;
     cursor: pointer;
     color: #222222;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.accordion::after {
+    content: '\002B';
+    color: #777;
+    font-weight: 600;
+    float: right;
+}
+
+.active::after {
+    content: '\2212';
 }
 
 .active,
@@ -35,6 +46,16 @@ body {
 }
 
 .panel {
-    padding: 10px 5px;
-    display: none;
+    padding: 0 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    -ms-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+}
+
+.panel p {
+    padding: 10px 0;
 }
