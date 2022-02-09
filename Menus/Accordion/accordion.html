@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Accordion</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed,
+                quisquam consectetur unde vel deserunt omnis quae ducimus iusto
+                soluta fugiat beatae laboriosam illum, culpa ratione dignissimos
+                explicabo quaerat hic id.
+            </p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed,
+                quisquam consectetur unde vel deserunt omnis quae ducimus iusto
+                soluta fugiat beatae laboriosam illum, culpa ratione dignissimos
+                explicabo quaerat hic id.
+            </p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed,
+                quisquam consectetur unde vel deserunt omnis quae ducimus iusto
+                soluta fugiat beatae laboriosam illum, culpa ratione dignissimos
+                explicabo quaerat hic id.
+            </p>
+        </div>
+
+        <script>
+            const accordion = document.getElementsByClassName('accordion');
+
+            for (singleButton of accordion) {
+                singleButton.addEventListener('click', function () {
+                    this.classList.toggle('active');
+
+                    const panel = this.nextElementSibling;
+
+                    if (panel.style.display === 'block') {
+                        panel.style.display = 'none';
+                    } else {
+                        panel.style.display = 'block';
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
